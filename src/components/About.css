@@ -1,0 +1,149 @@
+/* About Section Styles */
+#about {
+  padding: 6rem 0;
+  background-color: var(--gray-50);
+}
+
+.dark #about {
+  background-color: var(--gray-900);
+}
+
+/* Section title styling (common for all sections) */
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  color: var(--text-color);
+}
+
+.dark .section-title {
+  color: var(--text-color-dark);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5rem;
+  height: 0.25rem;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  border-radius: 0.125rem;
+}
+
+/* About content layout */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Profile image */
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; /* Added margin to move image lower */
+}
+
+.profile-image {
+  position: relative;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgba(var(--primary-rgb), 0.2);
+}
+
+@media (min-width: 768px) {
+  .profile-image {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+.profile-placeholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3.75rem;
+  font-weight: 700;
+}
+
+/* Bio content */
+.bio-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.bio-text {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+
+.dark .bio-text {
+  color: var(--gray-300);
+}
+
+/* Personal info grid */
+.personal-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-item-label {
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.dark .info-item-label {
+  color: var(--gray-100);
+}
+
+.info-item-value {
+  color: var(--gray-700);
+}
+
+.dark .info-item-value {
+  color: var(--gray-300);
+}
+
+/* CTA button */
+.about-cta {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 6px -1px rgba(var(--primary-rgb), 0.2);
+}
+
+.about-cta:hover {
+  transform: translateY(-2px);
+  background-color: var(--primary-dark);
+  box-shadow: 0 6px 8px -1px rgba(var(--primary-rgb), 0.3);
+}

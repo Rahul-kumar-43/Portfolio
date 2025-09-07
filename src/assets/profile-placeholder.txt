@@ -1,0 +1,5 @@
+/* 
+  This is a placeholder for the profile image.
+  In a real application, you would replace this with an actual image file
+  like profile.jpg, profile.png, etc.
+*/
