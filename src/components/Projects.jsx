@@ -50,9 +50,22 @@ const ProjectCard = ({ project, index }) => {
       
       {/* Links */}
       <div className="px-6 pb-4 flex space-x-3">
+        {project.liveDemo && (
+          <a 
+            href={project.liveDemo}
+            className="px-4 py-2 bg-primary hover:bg-primary/80 text-white rounded-lg flex items-center text-sm font-medium transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+            Live Demo
+          </a>
+        )}
         <a 
           href={project.github || '#'}
-          className="text-primary hover:text-primary/80 flex items-center text-sm"
+          className="px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-white rounded-lg flex items-center text-sm font-medium transition-colors"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -81,6 +94,14 @@ const Projects = () => {
       techStack: ['React', 'Spring Boot', 'SQL', 'RESTful API'],
       github: 'https://github.com/Rahul-kumar-43/Fast-Bike-and-Taxi--application',
       icon: '🏍️',
+    },
+    {
+      title: 'Pulse Chat',
+      description: 'A real-time group chat application enabling multiple users to communicate simultaneously in chat rooms identified by unique session keypins with WebSocket technology.',
+      techStack: ['React', 'TypeScript', 'Node.js', 'Express.js', 'Socket.IO', 'Tailwind CSS', 'Vite'],
+      github: 'https://github.com/Rahul-kumar-43/Pulse-Chat',
+      liveDemo: 'https://pulse-chat3.onrender.com/',
+      icon: '💬',
     },
   ];
 

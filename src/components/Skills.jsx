@@ -33,13 +33,13 @@ const Skills = () => {
     {
       title: 'Frontend',
       icon: '🌐',
-      skills: ['React',  'HTML', 'CSS'],
+      skills: ['React', 'TypeScript', 'HTML', 'CSS'],
       delay: 0.1,
     },
     {
       title: 'Backend',
       icon: '⚙️',
-      skills: ['Spring Boot', 'SQL', 'RESTful APIs', 'Database Design'],
+      skills: ['Spring Boot', 'Express.js', 'Node.js', 'SQL', 'RESTful APIs', 'Database Design'],
       delay: 0.2,
     },
     {
