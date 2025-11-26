@@ -93,6 +93,7 @@ const Projects = () => {
       description: 'A driver-focused transportation app for bike and taxi drivers to manage rides, track earnings, accept bookings, and navigate efficiently with real-time GPS tracking.',
       techStack: ['React', 'Spring Boot', 'SQL', 'RESTful API'],
       github: 'https://github.com/Rahul-kumar-43/Fast-Bike-and-Taxi--application',
+      liveDemo: 'https://fast-bike-and-taxi-application.vercel.app/',
       icon: '🏍️',
     },
     {
