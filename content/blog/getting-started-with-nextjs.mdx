@@ -1,0 +1,49 @@
+---
+title: "Getting Started with Next.js: A Developer's Guide"
+date: "2026-02-28"
+excerpt: "Learn how to build modern web applications with Next.js, the React framework for production. This guide covers App Router, Server Components, and best practices."
+tags:
+  - Next.js
+  - React
+  - Web Development
+---
+
+## Why Next.js?
+
+Next.js has become the go-to framework for building modern React applications. With features like Server Components, file-based routing, and built-in optimizations, it provides everything you need for production-ready applications.
+
+## Setting Up Your First Next.js Project
+
+Getting started with Next.js is straightforward. You can create a new project using the CLI tool which sets up everything you need including TypeScript, ESLint, and Tailwind CSS.
+
+### Key Features
+
+- **App Router**: The new file-system based router built on React Server Components
+- **Server Components**: Render components on the server for better performance
+- **Static Site Generation**: Pre-render pages at build time for the best performance
+- **Image Optimization**: Automatic image optimization with the next/image component
+- **Font Optimization**: Load Google Fonts with zero layout shift using next/font
+
+## Server Components vs Client Components
+
+One of the most important concepts in Next.js 15 is the distinction between Server and Client Components.
+
+### Server Components
+
+Server Components run only on the server. They can directly access databases, read files, and fetch data without exposing sensitive information to the client. They also reduce the JavaScript bundle size since their code never reaches the browser.
+
+### Client Components
+
+Client Components are the traditional React components we're familiar with. They run in the browser and can use hooks like useState and useEffect. You opt into Client Components by adding the "use client" directive at the top of your file.
+
+## Best Practices
+
+- Use Server Components by default and only add "use client" when you need interactivity
+- Colocate data fetching with the component that needs it
+- Use loading.tsx and error.tsx for better user experience
+- Optimize images with next/image and fonts with next/font
+- Implement proper metadata for SEO
+
+## Conclusion
+
+Next.js provides a powerful foundation for building modern web applications. By leveraging its built-in features and following best practices, you can create fast, SEO-friendly, and maintainable applications.
