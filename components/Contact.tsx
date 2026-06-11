@@ -101,6 +101,8 @@ export default function Contact() {
     return (
         <section id="contact" className="contact-section" aria-label="Contact">
             <div className="container">
+                
+
                 <motion.h2
                     className="section-title"
                     initial={{ opacity: 0, y: 20 }}

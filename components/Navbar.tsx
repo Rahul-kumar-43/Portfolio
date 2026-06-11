@@ -49,6 +49,7 @@ export default function Navbar() {
                         </a>
                     ))}
 
+
                     {/* Dark Mode Toggle */}
                     <button
                         onClick={toggleDarkMode}
@@ -111,6 +112,8 @@ export default function Navbar() {
                                     {link.name}
                                 </a>
                             ))}
+
+                    
 
                             {/* Dark Mode Toggle - Mobile */}
                             <button onClick={toggleDarkMode} className="mobile-dark-mode-toggle" aria-label="Toggle dark mode">
