@@ -53,7 +53,7 @@ export default function Footer() {
                             <li><a href="#skills" className="footer-link">Skills</a></li>
                             <li><a href="#projects" className="footer-link">Projects</a></li>
                             <li><a href="/blog" className="footer-link">Blog</a></li>
-                            <li><a href="#contact" className="footer-link">Contact</a></li>
+                            <li><a href="#connect" className="footer-link">Contact</a></li>
                         </ul>
                     </nav>
 

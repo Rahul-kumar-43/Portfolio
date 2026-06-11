@@ -49,6 +49,14 @@ export default function Hero() {
                 <div className="bg-circle bg-circle-3"></div>
             </div>
 
+            {/* Floating tech icons */}
+            <div className="hero-floating-icons" aria-hidden="true">
+                <span className="floating-icon floating-icon-1">⚛️</span>
+                <span className="floating-icon floating-icon-2">🚀</span>
+                <span className="floating-icon floating-icon-3">💻</span>
+                <span className="floating-icon floating-icon-4">⚡</span>
+            </div>
+
             <div className="container">
                 <motion.div
                     className="hero-content"
@@ -97,6 +105,15 @@ export default function Hero() {
             `}</style>
                     </motion.h2>
 
+                    <motion.p
+                        className="hero-tagline"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.5 }}
+                    >
+                        Building scalable apps that solve real problems.
+                    </motion.p>
+
                     <motion.div
                         className="hero-cta-group"
                         initial={{ opacity: 0 }}
@@ -115,12 +132,26 @@ export default function Hero() {
                                 />
                             </svg>
                         </a>
-                        <a href="#contact" className="btn-outline btn" style={{ borderRadius: "0.75rem" }}>
+                        <a href="#connect" className="btn-outline btn" style={{ borderRadius: "0.75rem" }}>
                             Get In Touch
                         </a>
                     </motion.div>
                 </motion.div>
             </div>
+
+            {/* Scroll indicator */}
+            <motion.div
+                className="hero-scroll-indicator"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2, duration: 0.8 }}
+                aria-hidden="true"
+            >
+                <span className="scroll-text">Scroll</span>
+                <div className="scroll-line">
+                    <div className="scroll-dot"></div>
+                </div>
+            </motion.div>
         </section>
     );
 }

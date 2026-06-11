@@ -5,7 +5,7 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Resume from "@/components/Resume";
-import Contact from "@/components/Contact";
+import ConnectCTA from "@/components/ConnectCTA";
 import Footer from "@/components/Footer";
 import LoadingScreen from "@/components/LoadingScreen";
 import CommandPalette from "@/components/CommandPalette";
@@ -34,7 +34,7 @@ export default function Home() {
                     <Skills />
                     <Projects />
                     <Resume />
-                    <Contact />
+                    <ConnectCTA />
                 </main>
                 <Footer />
             </div>

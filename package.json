@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
     "@vercel/analytics": "^1.4.1",
     "framer-motion": "^12.4.7",
     "gray-matter": "^4.0.3",

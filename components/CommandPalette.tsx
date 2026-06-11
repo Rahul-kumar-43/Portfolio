@@ -21,7 +21,7 @@ export default function CommandPalette() {
         { label: "About", icon: "👤", action: () => scrollTo("#about"), shortcut: "A" },
         { label: "Skills", icon: "🎯", action: () => scrollTo("#skills"), shortcut: "S" },
         { label: "Projects", icon: "💼", action: () => scrollTo("#projects"), shortcut: "P" },
-        { label: "Contact", icon: "📧", action: () => scrollTo("#contact"), shortcut: "C" },
+        { label: "Contact", icon: "📧", action: () => scrollTo("#connect"), shortcut: "C" },
         { label: "Blog", icon: "📝", action: () => { window.location.href = "/blog"; } },
         { label: "Resume", icon: "📄", action: () => scrollTo("#resume") },
         {
