@@ -33,6 +33,7 @@ export default function CommandPalette() {
         },
         { label: "GitHub", icon: "🐙", action: () => window.open("https://github.com/Rahul-kumar-43", "_blank") },
         { label: "LinkedIn", icon: "💼", action: () => window.open("https://linkedin.com/in/rahul-kumar-724855bt", "_blank") },
+        { label: "LeetCode", icon: "LC", action: () => window.open("https://leetcode.com/u/rahulKumar43/", "_blank") },
     ];
 
     const scrollTo = (hash: string) => {

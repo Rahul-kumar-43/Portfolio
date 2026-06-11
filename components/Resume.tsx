@@ -26,7 +26,7 @@ export default function Resume() {
                         Interested in working together? Download my resume to learn more about
                         my experience, skills, and the projects I&apos;ve worked on.
                     </p>
-                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-button">
+                    <a href="https://drive.google.com/file/d/1tbuWyokJN5f8HwhAlH7yRsWWRVjT8YEb/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="resume-button">
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path
                                 strokeLinecap="round"
