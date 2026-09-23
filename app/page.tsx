@@ -12,10 +12,19 @@ import CommandPalette from "@/components/CommandPalette";
 import ScrollToTop from "@/components/ScrollToTop";
 import GitHubStats from "@/components/GitHubStats";
 
+const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://rahulkumar43.dev";
+const siteUrl = rawSiteUrl.replace(/\/$/, "");
+
 export const metadata: Metadata = {
     title: "Rahul Kumar | Software & Full Stack Developer",
     description:
         "Welcome to the portfolio of Rahul Kumar — a Software & Full Stack Developer building modern web and mobile applications with React, Next.js, Kotlin, and Spring Boot.",
+    alternates: {
+        canonical: `${siteUrl}/`,
+    },
+    openGraph: {
+        url: `${siteUrl}/`,
+    },
 };
 
 export default function Home() {

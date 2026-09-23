@@ -10,7 +10,8 @@ const inter = Inter({
     variable: "--font-inter",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://rahulkumar.dev";
+const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://rahulkumar43.dev";
+const siteUrl = rawSiteUrl.replace(/\/$/, "");
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
@@ -31,12 +32,12 @@ export const metadata: Metadata = {
         "Mobile App Developer",
         "Portfolio",
     ],
-    authors: [{ name: "Rahul Kumar" }],
+    authors: [{ name: "Rahul Kumar", url: `${siteUrl}/` }],
     creator: "Rahul Kumar",
     openGraph: {
         type: "website",
         locale: "en_US",
-        url: siteUrl,
+        url: `${siteUrl}/`,
         siteName: "Rahul Kumar — Portfolio",
         title: "Rahul Kumar | Software & Full Stack Developer",
         description:
@@ -73,7 +74,7 @@ export const metadata: Metadata = {
         icon: "/lol.svg",
     },
     alternates: {
-        canonical: siteUrl,
+        canonical: `${siteUrl}/`,
     },
 };
 
@@ -106,36 +107,55 @@ export default function RootLayout({
                     dangerouslySetInnerHTML={{
                         __html: JSON.stringify({
                             "@context": "https://schema.org",
-                            "@type": "Person",
-                            name: "Rahul Kumar",
-                            url: siteUrl,
-                            image: `${siteUrl}/profile.jpg`,
-                            jobTitle: "Software & Full Stack Developer",
-                            worksFor: {
-                                "@type": "Organization",
-                                name: "Freelance",
-                            },
-                            address: {
-                                "@type": "PostalAddress",
-                                addressLocality: "Jammu and Kashmir",
-                                addressCountry: "India",
-                            },
-                            email: "romeydeviller@gmail.com",
-                            sameAs: [
-                                "https://github.com/Rahul-kumar-43",
-                                "https://linkedin.com/in/rahul-kumar-724855bt",
-                                "https://twitter.com/rahul58627",
-                                "https://www.instagram.com/kumar_rahul_43",
-                            ],
-                            knowsAbout: [
-                                "React",
-                                "TypeScript",
-                                "Spring Boot",
-                                "Kotlin",
-                                "Node.js",
-                                "SQL",
-                                "Mobile App Development",
-                                "Full Stack Development",
+                            "@graph": [
+                                {
+                                    "@type": "Person",
+                                    "@id": `${siteUrl}/#person`,
+                                    name: "Rahul Kumar",
+                                    url: `${siteUrl}/`,
+                                    image: `${siteUrl}/profile.jpg`,
+                                    jobTitle: "Software & Full Stack Developer",
+                                    worksFor: {
+                                        "@type": "Organization",
+                                        name: "Freelance",
+                                    },
+                                    address: {
+                                        "@type": "PostalAddress",
+                                        addressLocality: "Jammu and Kashmir",
+                                        addressCountry: "India",
+                                    },
+                                    email: "romeydeviller@gmail.com",
+                                    sameAs: [
+                                        "https://github.com/Rahul-kumar-43",
+                                        "https://linkedin.com/in/rahul-kumar-724855bt",
+                                        "https://twitter.com/rahul58627",
+                                        "https://www.instagram.com/kumar_rahul_43",
+                                    ],
+                                    knowsAbout: [
+                                        "React",
+                                        "TypeScript",
+                                        "Spring Boot",
+                                        "Kotlin",
+                                        "Node.js",
+                                        "SQL",
+                                        "Mobile App Development",
+                                        "Full Stack Development",
+                                    ],
+                                },
+                                {
+                                    "@type": "WebSite",
+                                    "@id": `${siteUrl}/#website`,
+                                    url: `${siteUrl}/`,
+                                    name: "Rahul Kumar — Portfolio",
+                                    description:
+                                        "Portfolio of Rahul Kumar — a Software & Full Stack Developer skilled in React, Kotlin, Spring Boot, and mobile app development.",
+                                    publisher: {
+                                        "@id": `${siteUrl}/#person`,
+                                    },
+                                    author: {
+                                        "@id": `${siteUrl}/#person`,
+                                    },
+                                },
                             ],
                         }),
                     }}

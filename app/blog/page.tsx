@@ -2,13 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllBlogPosts } from "@/lib/blog";
 
+const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://rahulkumar43.dev";
+const siteUrl = rawSiteUrl.replace(/\/$/, "");
+
 export const metadata: Metadata = {
     title: "Blog",
     description:
         "Articles and insights on software development, web technologies, and mobile app development by Rahul Kumar.",
+    alternates: {
+        canonical: `${siteUrl}/blog`,
+    },
     openGraph: {
         title: "Blog | Rahul Kumar",
         description: "Articles on software development, web technologies, and mobile apps.",
+        url: `${siteUrl}/blog`,
     },
 };
 

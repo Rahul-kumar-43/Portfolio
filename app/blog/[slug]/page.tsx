@@ -12,17 +12,26 @@ export async function generateStaticParams() {
     return posts.map((post) => ({ slug: post.slug }));
 }
 
+const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://rahulkumar43.dev";
+const siteUrl = rawSiteUrl.replace(/\/$/, "");
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     const post = getBlogPostBySlug(slug);
     if (!post) return {};
 
+    const postUrl = `${siteUrl}/blog/${slug}`;
+
     return {
         title: post.title,
         description: post.excerpt,
+        alternates: {
+            canonical: postUrl,
+        },
         openGraph: {
             title: post.title,
             description: post.excerpt,
+            url: postUrl,
             type: "article",
             publishedTime: post.date,
             authors: ["Rahul Kumar"],

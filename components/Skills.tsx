@@ -55,7 +55,7 @@ const skillCategories = [
     {
         title: "Backend",
         icon: "⚙️",
-        accentClass: "skill-accent-violet",
+        accentClass: "skill-accent-dark",
         skills: ["Spring Boot", "Express.js", "Node.js", "SQL", "RESTful APIs", "Database Design"],
         delay: 0.2,
     },

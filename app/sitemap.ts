@@ -3,11 +3,12 @@ import { getAllBlogPosts } from "@/lib/blog";
 import { getAllProjectSlugs } from "@/lib/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://rahulkumar.dev";
+    const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://rahulkumar43.dev";
+    const siteUrl = rawSiteUrl.replace(/\/$/, "");
 
     const staticRoutes: MetadataRoute.Sitemap = [
         {
-            url: siteUrl,
+            url: `${siteUrl}/`,
             lastModified: new Date(),
             changeFrequency: "monthly",
             priority: 1,

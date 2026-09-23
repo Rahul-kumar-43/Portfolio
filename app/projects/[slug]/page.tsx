@@ -11,17 +11,26 @@ export async function generateStaticParams() {
     return getAllProjectSlugs().map((slug) => ({ slug }));
 }
 
+const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://rahulkumar43.dev";
+const siteUrl = rawSiteUrl.replace(/\/$/, "");
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     const project = getProjectBySlug(slug);
     if (!project) return {};
 
+    const projectUrl = `${siteUrl}/projects/${slug}`;
+
     return {
         title: `${project.title} — Case Study`,
         description: project.description,
+        alternates: {
+            canonical: projectUrl,
+        },
         openGraph: {
             title: `${project.title} — Case Study | Rahul Kumar`,
             description: project.description,
+            url: projectUrl,
         },
     };
 }
